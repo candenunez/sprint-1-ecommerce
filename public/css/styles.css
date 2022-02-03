@@ -1,0 +1,532 @@
+*{  
+    font-family: 'Comforter', cursive;
+    font-family: 'Prompt', sans-serif;
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body {
+
+    
+        background: #E5E5E5;
+   
+}
+
+
+
+header {
+
+   
+
+    transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
+    /**flex: auto;**/
+
+}
+
+footer ul li{
+    list-style-type: none;
+}
+.ul{
+    list-style: none;
+}
+
+header .top-header{
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    font-size: small;
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: 0.5%;
+    padding-bottom: 0.01%;
+}
+
+.top-header-main {
+
+    display: flex;
+    justify-content: center;
+}
+
+.navegador {
+
+    display: flex;
+    list-style: none;
+    padding: 5px;
+    font-size: 15px;
+    justify-content: space-between;
+
+}
+
+.navegador ul{
+
+ display: flex;
+}
+
+
+
+header nav{
+    justify-content: space-around;
+    
+}
+
+header #form {
+    padding-top: 5%;
+    padding-left: 5%;
+}
+main{
+    margin-top: 5px;
+    margin-bottom: 250px;
+
+}
+main .princip{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items:center;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+@media (min-width: 361px){
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+}
+
+main section img {
+
+    width: 33%;
+    margin-bottom: 4px;
+}
+
+section.img-organizar {
+
+    text-align: center;
+    
+}
+
+.info .info-section {
+
+    float:left;
+    width: 100%;
+    text-align: center;
+}
+
+
+.container {
+   
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+.site-shopping-info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+
+.categoria{
+    color: white;
+    font-size: 24px;
+}
+.ul{
+    list-style: none;
+}
+
+
+
+main section article{
+    background-color: #fff;
+    margin: 15px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+
+
+}
+.discount{
+
+    text-align: right;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ebebeb;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+
+
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+main section div.products article i{
+    transition: transform 1s;
+}
+
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+section article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+section article:hover .description{
+    display: block;
+}
+
+.login input[type='submit']:hover,
+.register input[type='submit']:hover{
+    background-color: #0022AA;
+}
+
+@media (min-width: 361px){
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+
+
+}
+
+/*Desde aca empiezan los estilos del footer*/
+footer{
+
+    background-color: #097373;
+    color: white;
+    font-size: 30px;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.redes{
+    padding: 24px;
+}
+
+
+section.img-detalle {
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.containerDetailMacro {
+    display: flex;
+    max-width: 100%;
+    padding-left: 10%;
+}
+
+.containerDetail {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: nowrap;
+    align-content:flex-start;
+    align-items:baseline;
+    width: 50%;
+    margin-top: 0.05%;
+    margin-bottom: 0.01%;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.img-detalle .talla-select {     
+    font-size: .3rem;
+    padding: 2px 5px;
+}
+
+.WishlistAddCart {
+    padding-top: 3.7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;     /* Separa los elementos a ambos lados de la página */
+}
+
+.fixed :hover{
+    height: 200px; width: 200px; overflow: hidden;
+    position: absolute;            /* evita que se vaya muy lejos con el hover */
+  }
+
+section.suggestions-detalle {
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-right: 5%;
+    padding-top: 1%;
+    padding-left: 1%;
+}
+
+.containerSuggestions {
+    display: flex;
+    max-width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.arrows{
+    margin-top:10%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 116, 116);
+    font-size: 12px;
+    color: black;
+}
+
+/*desde aca carrito de compras*/
+.cart-page{
+    margin: 80px auto;
+    padding-right: 10%;
+    padding-left: 5%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    background: rgb(0, 116, 116);
+    font-weight: normal;
+}
+
+td{
+    padding: 10px 5px;
+}
+td input{       /** Para la linea <td><input type="number" value="1"></td> */
+    width: 40px;
+    height: 30x;
+    padding: 5px;
+}
+td a{
+    color: rgb(0, 116, 116);
+    font-size: 12px;
+}
+td img{
+    width: 130px;
+    height: 130px;
+    margin-right: 10px;
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0%;
+    padding-right: 10%;
+}
+.total-price table{
+    border-top: 3px solid rgb(0, 116, 116);
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: left;
+}
+th:last-child{
+    text-align: center;
+}
+
+.container-cart {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+    justify-content: space-around;
+}
+
+.botonPago{
+    padding-top: 5%;
+}
+
+
+/*cambios formularios css desde aqui*/
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+    
+    
+}
+
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 50%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
+}
+
+.main-register {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+
+    }
+
+    /*Hasta aqui es formulario*/
+
+   .formulario-login{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+
+   }
+
