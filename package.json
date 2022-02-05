@@ -1,7 +1,7 @@
 {
   "name": "main",
   "version": "1.0.0",
-  "description": "",
+  "description": "FILIA JEWELRY\r ------------------",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,14 @@
   "dependencies": {
     "express": "^4.17.2",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candenunez/sprint-1-ecommerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/candenunez/sprint-1-ecommerce/issues"
+  },
+  "homepage": "https://github.com/candenunez/sprint-1-ecommerce#readme"
 }
