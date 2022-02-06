@@ -55,17 +55,30 @@ header .middle-header{      /** INSTALAR CSS Flexbox Cheatsheet: https://css-tri
 }
 
 .logo{
-    border-radius: 50%;
+    padding-top: 10px;
+    border-radius: 30%;
     width:20%;
     height: auto;
 }
 
+form.search-box {
+    margin-left: 15%;
+}
+
 .iconos-top li {
-    list-style-type: circle;
+    font-size: 1.5em;
+    height: 35px;
     list-style-position: outside;
     padding-right: 15px;
     margin-right: 15px;
+    list-style:none;
 }
+
+nav.iconos-footer {
+
+    margin-top: 50%;
+}
+
 
 #formu{
     margin-right: 300px;
@@ -96,6 +109,14 @@ header .middle-header{      /** INSTALAR CSS Flexbox Cheatsheet: https://css-tri
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
+
+
+.img-organizar img:hover{
+
+
+    filter: blur(5px);    
+}
+
 
 
 .bottom-header{
@@ -351,11 +372,24 @@ footer{
 
     background-color: #097373;
     color: white;
-    font-size: 30px;    
+    font-size: 20px;    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     
+}
+
+.iconos-footer ul{
+
+    font-size: 30px;
+}
+
+.redes ul {
+    font-size: 40px;
+}
+
+.nosotros {
+    padding-top: 20px;
 }
 .redes{
     padding: 24px;
@@ -438,7 +472,6 @@ section.suggestions-detalle {
     padding-left: 5%;
     padding-bottom: 0%;
     margin-bottom: 0%;
-    font-size: 220%;
 }
 
 table{
@@ -450,9 +483,7 @@ table{
     display: flex;
     flex-wrap: wrap;
 }
-.cart-info a{
-    font-size: 60%;
-}
+
 th{
     text-align: left;
     padding: 5px;
@@ -465,7 +496,7 @@ td{
     padding: 10px 5px;
 }
 td input{       /** Para la linea <td><input type="number" value="1"></td> */
-    width: 60px;
+    width: 40px;
     height: 30x;
     padding: 5px;
 }
@@ -504,7 +535,6 @@ th:last-child{
     padding-left: 0%;
     padding-right: 0%;
     justify-content: space-around;
-    font-size: 200%;
 }
 
 .botonPago{
@@ -619,3 +649,89 @@ th:last-child{
 
    }
 
+/*Barra de busqueda */
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/*.body-searchbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}*/
+
+
+
+.search-box {
+  border: solid 5px black;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+}
+.search-box input[type=text] {
+  
+  font-size: 20px;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  padding: 5px 40px 5px 10px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 50px;
+  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
+}
+.search-box input[type=text]:focus {
+  outline: none;
+}
+.search-box input[type=text]:focus, .search-box input[type=text]:not(:placeholder-shown) {
+  width: 400px;
+  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.search-box input[type=text]:focus + button[type=reset], .search-box input[type=text]:not(:placeholder-shown) + button[type=reset] {
+  bottom: 13px;
+  right: 10px;
+  transition: bottom 150ms ease-out 800ms, right 150ms ease-out 800ms;
+}
+.search-box input[type=text]:focus + button[type=reset]:after, .search-box input[type=text]:not(:placeholder-shown) + button[type=reset]:after {
+  top: 0;
+  right: 10px;
+  opacity: 1;
+  transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms, opacity 150ms ease 950ms;
+}
+.search-box button[type=reset] {
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -13px;
+  right: -15px;
+  transition: bottom 150ms ease-out 150ms, right 150ms ease-out 150ms;
+}
+.search-box button[type=reset]:before, .search-box button[type=reset]:after {
+  content: "";
+  height: 25px;
+  border-left: solid 5px black;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.search-box button[type=reset]:after {
+  transform: rotate(45deg);
+  opacity: 0;
+  top: -20px;
+  right: -10px;
+  transition: top 150ms ease-out, right 150ms ease-out, opacity 150ms ease-out;
+}
