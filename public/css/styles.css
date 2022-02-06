@@ -438,6 +438,7 @@ section.suggestions-detalle {
     padding-left: 5%;
     padding-bottom: 0%;
     margin-bottom: 0%;
+    font-size: 220%;
 }
 
 table{
@@ -449,7 +450,9 @@ table{
     display: flex;
     flex-wrap: wrap;
 }
-
+.cart-info a{
+    font-size: 60%;
+}
 th{
     text-align: left;
     padding: 5px;
@@ -462,7 +465,7 @@ td{
     padding: 10px 5px;
 }
 td input{       /** Para la linea <td><input type="number" value="1"></td> */
-    width: 40px;
+    width: 60px;
     height: 30x;
     padding: 5px;
 }
@@ -501,6 +504,7 @@ th:last-child{
     padding-left: 0%;
     padding-right: 0%;
     justify-content: space-around;
+    font-size: 200%;
 }
 
 .botonPago{
