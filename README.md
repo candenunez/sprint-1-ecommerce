@@ -7,4 +7,4 @@ Participants:
 
 °Daniel David Franco Gutiérrez: 33 years-old full-stack and blockchain developer from Colombia. He is Co-Founder of NEU ENERGY S.A.S E.S.P ( www.neu.com.co ) and holds a BSc. in Engineering Physics from EAFIT University, as well as a Dipl. in Power T&D from Pontifical Bolivarian University (UPB).
 
-°Leonardo Maldonado: 27 years-gold Venezuelan, rookie full-stack developer and videogame entusiast.
+°Leonardo Maldonado: 27 years-old Venezuelan, rookie full-stack developer and videogame entusiast.
