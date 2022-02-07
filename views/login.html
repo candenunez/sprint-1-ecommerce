@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -71,65 +72,98 @@
     </header>
 
     <main class="main-register">
-
-
    
-    <form action="" class="formulario-login" id="formulario">
-        <h2>Inicia sesión aquí</h2>
-        <div class="formulario__grupo" id="grupo__usuario">
-            <h3>¿No tienes cuenta? Crea tu cuenta aquí</h3><br><br>
+        <form action="" class="formulario-login" id="formulario">
+            <h2>Inicia sesión aquí</h2>
+            <div class="formulario__grupo" id="grupo__usuario">
+                <h3>¿No tienes cuenta? Crea tu cuenta aquí</h3><br><br>
+                </div>
+
             </div>
 
-        </div>
+            
 
-        
-
-         <!-- Grupo: Usuario -->
-         <div class="formulario__grupo" id="grupo__nombre">
-            <label for="nombre" class="formulario__label">Usuario</label>
-            <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input">
-                
-             </div>
-
-             <div class="formulario__grupo" id="grupo__password2">
-                <label for="password2" class="formulario__label">Contraseña</label>
+            <!-- Grupo: Usuario -->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Usuario</label>
                 <div class="formulario__grupo-input">
-                    <input type="password" class="formulario__input">
-                    <br><br>
+                    <input type="text" class="formulario__input">
+                    
                 </div>
 
-                <input type="checkbox" checked="checked">
-                <span>Recordarme</span><br><br><br><br>
-                
-            </div>
-            <div class="login__grupo-btn-enviar">
-                <button type="submit" class="formulario__btn">Ingresar</button>
-                
-            </div>
-    
-        </div>
+                <div class="formulario__grupo" id="grupo__password2">
+                    <label for="password2" class="formulario__label">Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input">
+                        <br><br>
+                    </div>
 
-              <div class="list-login">
-                <p>Esto es todo lo que podés hacer al registrarte:</p><br><br>
-                <ul style="list-style-type:disc">
-                    <li>Agilizar el proceso de compra</li> <br><br>
-                    <li>Guardar direcciones de envío</li>   <br><br>
-                    <li>Seguimientos de tus compras y revisar los pedidos</li> <br><br>
-                    <li>Acumular puntos y acceder a promociones</li> <br><br>
-                    <li>Hacer una lista con tus productos favoritos</li> <br><br>
-                    <br><br>
-                  </ul>
-
-                  <div class="login__grupo-btn-enviar">
+                    <input type="checkbox" checked="checked">
+                    <span>Recordarme</span><br><br><br><br>
                     
-                    <button formaction="/register" type="submit" class="formulario__btn">Crear cuenta</button>
-                  
-                     </div>
+                </div>
+                <div class="login__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Ingresar</button>
+                    
                 </div>
         
-    </form>
+            </div>
+
+                <div class="list-login">
+                    <p>Esto es todo lo que podés hacer al registrarte:</p><br><br>
+                    <ul style="list-style-type:disc">
+                        <li>Agilizar el proceso de compra</li> <br><br>
+                        <li>Guardar direcciones de envío</li>   <br><br>
+                        <li>Seguimientos de tus compras y revisar los pedidos</li> <br><br>
+                        <li>Acumular puntos y acceder a promociones</li> <br><br>
+                        <li>Hacer una lista con tus productos favoritos</li> <br><br>
+                        <br><br>
+                    </ul>
+
+                    <div class="login__grupo-btn-enviar">
+                        
+                        <button formaction="/register" type="submit" class="formulario__btn">Crear cuenta</button>
+                    
+                        </div>
+                    </div>
+            
+        </form>
 
     </main>
+
+    <footer>
+        <div class="navegador-f">
+
+            <nav class= "iconos-footer">
+            
+                <ul>
+                    <li><a style="color: rgb(247, 245, 245);" href="#"><i class="far fa-heart"></i></a></li>
+                    <li><a style="color: rgb(245, 243, 243);" href="#"><i class="fas fa-user-circle"></i></a></li>
+                    <li><a style="color: rgb(255, 251, 251);" href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a style="color: rgb(252, 249, 249);" href="#"><i class="far fa-question-circle"></i></a></li>
+                </ul>
+
+            </nav>
+       </div> 
+       
+       <div class="nosotros">
+           
+           <ul>
+            <p><strong>NOSOTROS</strong></p>
+                <p style="color:#097373">-</p>
+                <li><a class="categoria" href="#">Sobre Filia</a></li>
+                <li><a class="categoria" href="#">Preguntas frecuentes</a></li>
+                <li><a class="categoria" href="#">Contacto</a></li>
+                <li><a class="categoria" href="#">Ser revendedor</a></li>
+                <p style="color:#097373">-</p>
+           </ul>
+       </div>
+       <div class="redes">
+           <ul>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+            </ul>
+       </div>
+    </footer>
 </body>
 </html>
