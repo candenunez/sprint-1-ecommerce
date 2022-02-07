@@ -13,7 +13,6 @@
     "express": "^4.17.2",
     "path": "^0.12.7"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/candenunez/sprint-1-ecommerce.git"

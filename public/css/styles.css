@@ -411,7 +411,7 @@ section.img-detalle {
 }
 
 .containerDetail {
-    display: flex;
+    
     flex-direction: column;
     text-align: center;
     flex-wrap: nowrap;
@@ -436,10 +436,40 @@ section.img-detalle {
     justify-content: space-between;     /* Separa los elementos a ambos lados de la página */
 }
 
-.fixed :hover{
-    height: 200px; width: 200px; overflow: hidden;
-    position: absolute;            /* evita que se vaya muy lejos con el hover */
-  }
+section.suggestions-detalle {
+    padding-left: 5%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    font-size: 220%;
+}
+
+table{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-info a{
+    font-size: 60%;
+}
+
+tbody {
+    font-size: 130%;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    padding: 10px 5px;
+    }
+
+    td input{       /** Para la linea <td><input type="number" value="1"></td> */
+       
+        width: 60px;
+        height: 30x;
+        padding: 5px;
+    }
+
+
 
 section.suggestions-detalle {
     margin-left: 5%;
@@ -472,6 +502,7 @@ section.suggestions-detalle {
     padding-left: 5%;
     padding-bottom: 0%;
     margin-bottom: 0%;
+    font-size: 130%;
 }
 
 table{
@@ -540,6 +571,8 @@ th:last-child{
 .botonPago{
     padding-top: 5%;
 }
+
+
 
 
 /*cambios formularios css desde aqui*/
@@ -660,13 +693,6 @@ html, body {
   margin: 0;
 }
 
-/*.body-searchbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  overflow: hidden;
-}*/
 
 
 
