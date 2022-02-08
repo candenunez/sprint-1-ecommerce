@@ -10,18 +10,15 @@ body {
         background: #E5E5E5;
 }
 
-header {
 
-    transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
-    /**flex: auto;**/
-
-}
-
-footer ul li{
-    list-style-type: none;
-}
 .ul{
     list-style: none;
+}
+
+
+/** From now on the header: */
+header {
+    transition: 0.2s; /* Add a transition effect (when scrolling - and font size is decreased) */
 }
 
 header .top-header{
@@ -37,7 +34,7 @@ header .top-header{
     justify-content: center;
 }
 
-header .middle-header{      /** INSTALAR CSS Flexbox Cheatsheet: https://css-tricks.com/snippets/css/complete-guide-grid/ */
+header .middle-header{      /** Install CSS Flexbox Cheatsheet: https://css-tricks.com/snippets/css/complete-guide-grid/ */
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 0%;
@@ -53,20 +50,24 @@ header .middle-header{      /** INSTALAR CSS Flexbox Cheatsheet: https://css-tri
     text-align: left;
     padding-left: 100px;
 }
-
 .logo{
-    border-radius: 50%;
+    padding-top: 10px;
+    border-radius: 30%;
     width:20%;
     height: auto;
 }
-
 .iconos-top li {
-    list-style-type: circle;
+    font-size: 1.5em;
+    height: 35px;
     list-style-position: outside;
     padding-right: 15px;
     margin-right: 15px;
+    list-style:none;
 }
 
+form.search-box {
+    margin-left: 15%;
+}
 #formu{
     margin-right: 300px;
     margin-top: 40px;
@@ -97,6 +98,70 @@ header .middle-header{      /** INSTALAR CSS Flexbox Cheatsheet: https://css-tri
     transition: all 0.4s ease-in-out;
 }
 
+.search-box {
+    border: solid 5px black;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+}
+.search-box input[type=text] {
+    font-size: 20px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    padding: 5px 40px 5px 10px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 50px;
+    transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
+}
+.search-box input[type=text]:focus {
+    outline: none;
+}
+.search-box input[type=text]:focus, .search-box input[type=text]:not(:placeholder-shown) {
+    width: 400px;
+    transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.search-box input[type=text]:focus + button[type=reset], .search-box input[type=text]:not(:placeholder-shown) + button[type=reset] {
+    bottom: 13px;
+    right: 10px;
+    transition: bottom 150ms ease-out 800ms, right 150ms ease-out 800ms;
+}
+.search-box input[type=text]:focus + button[type=reset]:after, .search-box input[type=text]:not(:placeholder-shown) + button[type=reset]:after {
+    top: 0;
+    right: 10px;
+    opacity: 1;
+    transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms, opacity 150ms ease 950ms;
+}
+.search-box button[type=reset] {
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -13px;
+    right: -15px;
+    transition: bottom 150ms ease-out 150ms, right 150ms ease-out 150ms;
+}
+.search-box button[type=reset]:before, .search-box button[type=reset]:after {
+    content: "";
+    height: 25px;
+    border-left: solid 5px black;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+.search-box button[type=reset]:after {
+    transform: rotate(45deg);
+    opacity: 0;
+    top: -20px;
+    right: -10px;
+    transition: top 150ms ease-out, right 150ms ease-out, opacity 150ms ease-out;
+}
 
 .bottom-header{
     padding-top: 0.5%;
@@ -110,7 +175,7 @@ header .middle-header{      /** INSTALAR CSS Flexbox Cheatsheet: https://css-tri
     text-align: center;
 }
 
-.grid-container {
+.grid-container {           /** To accommodate the links in the lower header section */
     display: inline-grid;
     column-gap: 15px;
     color: white;
@@ -127,7 +192,6 @@ header .middle-header{      /** INSTALAR CSS Flexbox Cheatsheet: https://css-tri
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    
 }
 .grid-item-3 {
     grid-column-start: 3;
@@ -160,10 +224,14 @@ header .middle-header{      /** INSTALAR CSS Flexbox Cheatsheet: https://css-tri
     grid-row-end: 2;
 }
 
+
+/** From now on, the main: */
 main{
     margin-top: 5px;
     margin-bottom: 250px;
-
+}
+.img-organizar img:hover{
+    filter: blur(5px);    
 }
 main .princip{
     display: flex;
@@ -172,67 +240,25 @@ main .princip{
     align-content: center;
     align-items:center;
 }
-
-.container {
-    display: flex;
-    text-align: center;
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 25px;
-}
-
-@media (min-width: 361px){
-    main section div.products{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    
-    main section div.products article{
-        width: 45%;
-    }
-
-    .price,
-    .discount{
-        width: 50%;
-    }
-}
-
-@media (min-width: 769px){
-    main section div.products article{
-        width: 22%;
-    }
-}
-
 main section img {
-
     width: 33%;
     margin-bottom: 4px;
 }
-
 section.img-organizar {
-
     text-align: center;
-    
 }
-
 .info .info-section {
-
     float:left;
     width: 100%;
     text-align: center;
 }
-
-
 .container {
-   
+    display: flex;
+    text-align: center;
     width: 100%;
     margin-top: 40px;
     margin-bottom: 40px;
-    font-size: 18px;
+    font-size: 25px;
 }
 .site-shopping-info{
     display: flex;
@@ -240,8 +266,6 @@ section.img-organizar {
     margin-top: 150px;
     margin-bottom: 100px;
 }
-
-
 .categoria{
     color: white;
     font-size: 24px;
@@ -249,26 +273,16 @@ section.img-organizar {
 .ul{
     list-style: none;
 }
-
-
-
 main section article{
     background-color: #fff;
     margin: 15px 0px;
 }
-
 main section article img{
     width: 100%;
 }
-
 main section article i,
 .discount{
     color: #39b54a;
-
-
-}
-.discount{
-
     text-align: right;
 }
 
@@ -284,19 +298,10 @@ main section article i{
     position: absolute;
     right: 20px;
     top: -15px;
-
-
 }
-
-main section h3{
-    margin: 20px 0px;
-}
-
 main section div.products article i{
     transition: transform 1s;
 }
-
-
 article div.main-article{
     width: 100%;
     display: flex;
@@ -305,63 +310,22 @@ article div.main-article{
     border-top: 1px solid #ebebeb;
     position: relative;
     padding: 15px;
+    text-align: center;
 }
 section article:hover{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    padding-bottom: 0.2%;
 }
 section article:hover .description{
     display: block;
 }
 
-.login input[type='submit']:hover,
-.register input[type='submit']:hover{
-    background-color: #0022AA;
-}
-
-@media (min-width: 361px){
-    main section div.products{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    main section div.products article{
-        width: 45%;
-    }
-
-    .price,
-    .discount{
-        width: 50%;
-    }
-
-}
-
-@media (min-width: 769px){
-    main section div.products article{
-        width: 22%;
-    }
-
-
-}
-
-/*Desde aca empiezan los estilos del footer*/
-footer{
-
-    background-color: #097373;
-    color: white;
-    font-size: 30px;    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.redes{
-    padding: 24px;
+main section h3{
+    margin: 20px 0px;
 }
 
 
+/** From now on, the product-detail page: */
 section.img-detalle {
     margin-left: 5%;
     margin-top: 2%;
@@ -369,15 +333,12 @@ section.img-detalle {
     padding-top: 1%;
     padding-left: 1%;
 }
-
 .containerDetailMacro {
     display: flex;
     max-width: 100%;
     padding-left: 10%;
 }
-
 .containerDetail {
-    display: flex;
     flex-direction: column;
     text-align: center;
     flex-wrap: nowrap;
@@ -389,24 +350,16 @@ section.img-detalle {
     font-size: 25px;
     margin-left: 20px;
 }
-
 .img-detalle .talla-select {     
     font-size: .3rem;
     padding: 2px 5px;
 }
-
 .WishlistAddCart {
     padding-top: 3.7%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;     /* Separa los elementos a ambos lados de la página */
+    justify-content: space-between;     /* Forces the elements towards both extremes of the flex-direction */
 }
-
-.fixed :hover{
-    height: 200px; width: 200px; overflow: hidden;
-    position: absolute;            /* evita que se vaya muy lejos con el hover */
-  }
-
 section.suggestions-detalle {
     margin-left: 5%;
     margin-top: 2%;
@@ -414,15 +367,15 @@ section.suggestions-detalle {
     margin-right: 5%;
     padding-top: 1%;
     padding-left: 1%;
+    font-size: large;
+    color: rgb(0, 116, 116);
 }
-
 .containerSuggestions {
     display: flex;
     max-width: 100%;
     padding-left: 20%;
     padding-right: 20%;
 }
-
 .arrows{
     margin-top:10%;
     background-color: rgb(255, 255, 255);
@@ -431,27 +384,78 @@ section.suggestions-detalle {
     color: black;
 }
 
-/*desde aca carrito de compras*/
+
+/*From now on, the footer:*/
+.upper-footer{
+    background-color: #097373;
+    color: white;
+    font-size: 20px;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.upper-footer ul li{
+    list-style-type: none;
+}
+nav.iconos-footer {
+    margin-top: 50%;
+}
+.iconos-footer ul{
+
+    font-size: 30px;
+}
+.redes ul {
+    font-size: 40px;
+}
+.nosotros {
+    padding-top: 20px;
+}
+.redes{
+    padding: 24px;
+}
+.lower-footer{
+    background-color: black;
+    text-align: right;
+    border-style:double;
+}
+.logo_footer{
+    border-style: groove;
+    padding: 5px;
+    border-radius: 100%;
+    width:3%;
+    height: auto;
+}
+
+/*From now on, the shopping cart:*/
 .cart-page{
     margin: 80px auto;
     padding-right: 10%;
     padding-left: 5%;
     padding-bottom: 0%;
     margin-bottom: 0%;
-    font-size: 220%;
+    font-size: 130%;
 }
 
 table{
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     border-collapse: collapse;
 }
-
 .cart-info{
     display: flex;
     flex-wrap: wrap;
 }
 .cart-info a{
     font-size: 60%;
+}
+tbody {
+    font-size: 130%;
+}
+td input{       /** For the line <td><input type="number" value="1"></td> */
+    width: 60px;
+    height: 30x;
+    padding: 5px;
 }
 th{
     text-align: left;
@@ -460,25 +464,21 @@ th{
     background: rgb(0, 116, 116);
     font-weight: normal;
 }
-
 td{
     padding: 10px 5px;
 }
-td input{       /** Para la linea <td><input type="number" value="1"></td> */
-    width: 60px;
-    height: 30x;
-    padding: 5px;
-}
 td a{
+    padding: 2px;
     color: rgb(0, 116, 116);
     font-size: 12px;
+    font-style: oblique;
+    border-style: inset;
 }
 td img{
     width: 130px;
     height: 130px;
     margin-right: 10px;
 }
-
 .total-price{
     display: flex;
     justify-content: flex-end;
@@ -504,35 +504,27 @@ th:last-child{
     padding-left: 0%;
     padding-right: 0%;
     justify-content: space-around;
-    font-size: 200%;
-}
-
-.botonPago{
-    padding-top: 5%;
 }
 
 
-/*cambios formularios css desde aqui*/
+/*From now on, Login:*/
 .formulario {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
 }
-
 .formulario__label {
 	display: block;
 	font-weight: 700;
 	padding: 10px;
 	cursor: pointer;
 }
-
 .formulario__grupo-input {
 	position: relative;
 }
-
 .formulario__input {
 	width: 100%;
-	background: #fff;
+	background: #0AA689;
 	border: 3px solid transparent;
 	border-radius: 3px;
 	height: 45px;
@@ -540,34 +532,24 @@ th:last-child{
 	padding: 0 40px 0 10px;
 	transition: .3s ease all;
 }
-
 .formulario__input:focus {
 	border: 3px solid #0075FF;
 	outline: none;
 	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
 }
-
-
 .formulario__checkbox {
 	margin-right: 10px;
 }
-
 .formulario__grupo-terminos, 
 .formulario__mensaje,
 .formulario__grupo-btn-enviar {
 	grid-column: span 2;
-    
-    
 }
-
-
 .formulario__grupo-btn-enviar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-
-
 .formulario__btn {
 	height: 45px;
 	line-height: 45px;
@@ -580,42 +562,173 @@ th:last-child{
 	cursor: pointer;
 	transition: .1s ease all;
 }
+.formulario-login{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+}
+
+.main-register {            /** This class is also present in the register view */
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+    }
+.login__grupo-btn-pago{
+    width: 30%;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.login input[type='submit']:hover,
+.register input[type='submit']:hover{
+    background-color: #0022AA;
+}
 
 
+/* ----- ----- importqueries ----- ----- */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
 
 
 /* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-width: 800px) {
+@media (min-width: 361px){
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+
+   
+}
+@media screen and (max-width: 769px) {
 	.formulario {
 		grid-template-columns: 1fr;
 	}
-
 	.formulario__grupo-terminos, 
 	.formulario__mensaje,
 	.formulario__grupo-btn-enviar {
 		grid-column: 1;
 	}
-
 	.formulario__btn {
 		width: 100%;
 	}
+    .img-organizar {
+        display: none;
+    }
+    
+}
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+   
 }
 
-.main-register {
-	max-width: 800px;
-	width: 90%;
-	margin: auto;
-	padding: 40px;
+@media (min-width: 769px) {
 
+    .logo {
+        height: auto;
+        padding-right: 50px;
+       
+    }
+    .iconos-footer ul{
+        font-size: 20px;
     }
 
-    /*Hasta aqui es formulario*/
+    #register-min {
+        display: none;
+    }
 
-   .formulario-login{
+    .img-visible {
+        display: none;
+    }
+   
+}
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 100px;
+@media (max-width: 361px) {
 
-   }
+    .list-login {
+        
+        display: none;
+    }
 
+    div#grupo__usuario {
+        display: none;
+    }
+  
+        .formulario-login{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .nosotros .categoria{
+            font-size: 15px;
+            
+        }
+        .search-box {
+
+            display: none;
+        }
+        .logo {
+            visibility: visible;
+            width: 60%;
+        }
+
+        .container {
+
+            display: block;
+            font-size: 90%;
+        }
+
+        .img-organizar {
+            display: none;
+            
+        }
+
+        .img-visible {
+
+            width: 100%;
+            text-align: center;
+            
+        }
+           
+        .cart-page {
+            font-size: 70%;
+        }
+
+        .container-cart {
+            font-size: 70%;
+        }
+
+        .site-shopping-info {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .bottom-header a:hover {
+        content: "";
+        height: 3px;
+        width: 100%;
+        background: silver;
+        left: 0;
+        bottom: -12px;
+        transition: 0.4s ease-out;
+    }
