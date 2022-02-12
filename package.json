@@ -5,10 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js"
+    "start": "node app.js",
+    "__comment1__": "´start´: ´node app.js´ must be present for Heroku execution to work, it doesn't impede local execution"
   },
   "keywords": [],
-  "author": "Candela Nuñez & Daniel Franco",
+  "author": "Candela Nuñez & Daniel Franco & Leonardo Maldonado",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
