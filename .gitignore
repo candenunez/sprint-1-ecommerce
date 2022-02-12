@@ -32,3 +32,4 @@ packages/
 /views/login.html.orig
 /node_modules/.bin
 /node_modules
+/other
