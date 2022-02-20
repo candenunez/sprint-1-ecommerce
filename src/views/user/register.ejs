@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+                      <!-- head    -->
+                      <%- include('../partials/head.ejs') %>
+                      <!-- head    -->
+      <body>
+                     <!-- header -->
+                     <%- include('../partials/header.ejs') %>
+                     <!-- header -->
+          
+
+        <main class="main-register">
+            <h1>Crear cuenta</h1>
+            <form action="" class="formulario" id="formulario">
+                <!-- Group: User -->
+                <div class="formulario__grupo" id="grupo__usuario">
+                    <label for="usuario" class="formulario__label">Usuario</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="usuario" id="usuario"   minlength="4" maxlength="12" required>
+                    </div>
+                </div>
+
+                <!-- Group: Name -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Nombre</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre" minlength="4" maxlength="12" required>
+                    </div>
+                </div>
+
+                <!-- Group: Password -->
+                <div class="formulario__grupo" id="grupo__password">
+                    <label for="password" class="formulario__label">Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Tiene que contener al menos un numero, una mayúscula, una minúscula y al menos 8 o mas caracteres" required>
+                    </div>
+                </div>
+
+                <!-- Group: Password 2 -->
+                <div class="formulario__grupo" id="grupo__password2">
+                    <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password2" id="password2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"required>
+                    </div>
+                </div>
+
+                <!-- Group: Email -->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label for="correo" class="formulario__label">Correo Electrónico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                    </div>
+                </div>
+
+                <!-- Group: Address -->
+                <div class="formulario__grupo" id="grupo__address">
+                    <label for="address" class="formulario__label">Dirección de domicilio</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="address" id="address" >
+                    </div>
+                </div>
+
+                <!-- Group: Terms & Conditions -->
+                <div class="formulario__grupo" id="grupo__terminos">
+                    <label class="formulario__label">
+                        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required>
+                        Acepto los Terminos y Condiciones
+                    </label>
+                </div>
+
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Crear cuenta</button>
+                </div>
+            </form>
+        </main>
+
+       <!-- footer -->
+	    <%- include('../partials/footer') %>
+	<!-- /footer -->
+    </body>
+</html>
+

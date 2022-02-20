@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+                    <!-- head    -->
+                    <%- include('../partials/head.ejs') %>
+                    <!-- head    -->
+    <body>
+                   <!-- header -->
+                   <%- include('../partials/header.ejs') %>
+                   <!-- header -->
+        
+        <main style="background-image:url('images/Plantillas Feed-02_v2.jpg')">
+            <div class="cart-page">
+
+                <h1>Mi Carrito</h1>
+
+                <table>
+                    <tr style="border-style:solid;border-width: 2px;">
+                        <th>Producto</th>
+                        <th>Cantidad&nbsp;</th> <!-- &nbsp; : empty space -->
+                        <th>Subtotal</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="images/art5.jpg" alt="producto 1 carrito">
+                                <div>
+                                    <p>Collar BlackZafiro</p>
+                                    <small>Precio: $2600</small>
+                                    <a href="">Remover</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>    <!-- A button with a number selector -->
+                        <td>$2600</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="images/art1.jpg" alt="producto 1 carrito">
+                                <div>
+                                    <p>Dije de Amatista</p>
+                                    <small>Precio: $2500</small>
+                                    <a href="">Remover</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>$2500</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="images/art3.jpg" alt="producto 1 carrito">
+                                <div>
+                                    <p>Pendientes de Perla</p>
+                                    <small>Precio: $2000</small>
+                                    <a href="">Remover</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>$2000</td>
+                    </tr>
+                </table>
+            </div>
+
+            <section class="container-cart">
+                <div class="total-price">
+                    <table>
+                        <tr>
+                            <td style="color:rgb(0, 116, 116)">Subtotal:</td>
+                            <td>$7000</td>
+                        </tr>
+
+                        <tr>
+                            <td style="color:rgb(0, 116, 116)">IVA (27%):</td>
+                            <td>$1890</td>
+                        </tr>
+
+                        <tr>
+                            <td style="color:rgb(0, 116, 116)">Total:</td>
+                            <td>$8890</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="login__grupo-btn-pago">
+                    <button type="submit" class="formulario__btn">Ir al portal de pago!</button>
+                </div>
+            </section>
+       <!-- site-shopping-info -->
+     <%- include('../partials/site-shopping-info.ejs') %>
+    <!-- site-shopping-info -->
+        </main>
+
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+                     <!-- head    -->
+                     <%- include('../partials/head.ejs') %>
+                     <!-- head    -->
+     <body>
+                    <!-- header -->
+                    <%- include('../partials/header.ejs') %>
+                    <!-- header -->
+         
+
+        <main class="main-register">
+            <form action="" class="formulario-login" id="formulario">
+                <h2>Inicia sesión aquí</h2>
+                <div class="formulario__grupo" id="grupo__usuario">
+                    <h3>¿No tienes cuenta? Crea tu cuenta aquí</h3><br><br>
+                </div>
+
+                <!-- Group: User -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Usuario</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input">
+                    </div>
+
+                    <div class="formulario__grupo" id="grupo__password2">
+                        <label for="password2" class="formulario__label">Contraseña</label>
+                        <div class="formulario__grupo-input">
+                            <input type="password" class="formulario__input">
+                            <br><br>
+                        </div>
+
+                        <input type="checkbox" checked="checked">
+                        <span>Recordarme</span><br><br><br><br>
+                    </div>
+
+                    <div class="login__grupo-btn-enviar">
+                        <button type="submit" class="formulario__btn">Ingresar</button>
+                    </div>
+
+                    <div class="login__grupo-btn-enviar"id="register-min">
+                        <br><button formaction="/register" type="submit" class="formulario__btn" >Registrarse</button>
+                    </div>
+                </div>
+
+                <div class="list-login">
+                    <p>Esto es todo lo que podés hacer al registrarte:</p><br><br>
+                    <ul style="list-style-type:disc">
+                        <li>Agilizar el proceso de compra</li> <br><br>
+                        <li>Guardar direcciones de envío</li>   <br><br>
+                        <li>Seguimientos de tus compras y revisar los pedidos</li> <br><br>
+                        <li>Acumular puntos y acceder a promociones</li> <br><br>
+                        <li>Hacer una lista con tus productos favoritos</li> <br><br>
+                        <br><br>
+                    </ul>
+
+                    <div class="login__grupo-btn-enviar">
+                        <button formaction="/register" type="submit" class="formulario__btn">Crear cuenta</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+    </body>
+</html>

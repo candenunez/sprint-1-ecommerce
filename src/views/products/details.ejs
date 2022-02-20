@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+                    <!-- head    -->
+                    <%- include('../partials/head.ejs') %>
+                    <!-- head    -->
+
+    <body>
+                    <!-- header -->
+                    <%- include('../partials/header.ejs') %>
+                    <!-- header -->
+    
+        <main style="background-image:url('images/Plantillas Feed-02_v2.jpg')">
+            <section class="img-detalle">
+                <div class="containerDetailMacro">
+                    <img src="images/pulserarolon.jpg" alt="cadena negra" width="100%" height="100%">
+
+                    <div class="containerDetail">
+                        <i class="fas fa-gem" height="4.5%" width="auto" style="color:#0AA689"></i>
+                        
+                        <div class="texto-body">
+                            <h3><p><strong>Pulsera BlackZafiro</strong></p></h3>
+                            <p class= "price" style="color:rgb(0, 116, 116);font-size:18px;">Standard: $2600,  Larga: $3100</p>
+                            <h4 class="description">Pulsera de plata tipo rolon, de 20 cm de largo con un espesor de 0.5.</h4>
+                            
+                            <select name="tallas" id="talla-select">
+                                <option value="">--Elige el tamaño--</option>
+                                <option value="M">Standard</option>
+                                <option value="XL">Larga</option>
+                            </select>
+                        </div>
+
+                        <div class="WishlistAddCart">
+                            <div class="fixed">
+                                <a href="/cart">
+                                    <i class="fa fa-heart" aria-hidden="true" height="10%" width="auto" style="color:#0AA689"></i>
+                                </a>
+                                <p><a style="color: rgb(0, 116, 116);" href="#">A tus favoritos</a></p>
+                            </div>
+
+                            <div class="fixed">
+                                <p style="color: rgb(255, 255, 255);"></p>
+                            </div>
+
+                            <div class="fixed">
+                                <a href="/cart">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true" height="10%" width="auto" style="color:#0AA689"></i>
+                                </a>
+                                <p><a style="color: rgb(0, 116, 116);" href="/cart">Al carrito</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="suggestions-detalle">
+                <div class="containerSuggestions"></div>
+                    <h5 style="margin-left: 12.5%;margin-top: 4%;">También te podría interesar:</h5>
+                    
+                    <div class="products">
+                        <button class="arrows"><i class='fas fa-arrow-left'></i></button>
+
+                        <article>   
+                            <img src="images/art1.jpg" alt="dije">
+                            <div class="main-article">
+                                <i class="far fa-heart"></i>
+                                <p class= "price">$2600</p>
+                            </div>
+                        </article>
+
+                        <article>   
+                            <img src="images/art2.jpg" alt="aro">   
+                            <div class="main-article">
+                                <i class="far fa-heart"></i>
+                                <p class= "price">$2600</p>
+                            </div>
+                        </article>
+
+                        <article>   
+                            <img src="images/art3.jpg" alt="aro">   
+                            <div class="main-article">
+                                <i class="far fa-heart"></i>
+                                <p class= "price">$2600</p>
+                            </div>
+                        </article>
+
+                        <button class="arrows"><i class='fas fa-arrow-right' style="color:black"></i></button>
+                    </div>
+                </div>
+            </section>
+           <!-- site-shopping-info -->
+           <%- include('../partials/site-shopping-info.ejs') %>
+         <!-- site-shopping-info -->
+        </main>
+
+        <%- include('../partials/footer.ejs') %>
+    </body>
+</html>
